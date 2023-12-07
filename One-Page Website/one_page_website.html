@@ -3,10 +3,13 @@
    <head>
      <meta charset="ult-8">
 	 <title>Visiting most popular cities</title>
-   <link rel="stylesheet" href="./css/one_page_website.css">
+   <link rel="stylesheet" href="CSS/one_page_website.css">
+   <script src="JS/one_page_website.js" defer></script>
    </head>
 <body>
- 
+  <p>Good video about Barcelona</p>
+    <iframe width="1024" height="576" src="https://www.youtube.com/embed/uOzwwZxjPRs" title="Barcelona in 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <!-- NAV -->
   <div>
    <div>
@@ -17,6 +20,7 @@
     </ul>
    </div>
   </div>
+  
   <!-- END NAV -->
 
   <!-- HOME -->
@@ -31,67 +35,73 @@
 
   <!-- GALLERY -->
   <section>
-   <div id="gallery">
-    <h1>Gallery</h1>
-     <div>
-	 
-        <!-- PHOTO CONTAINER 1 -->
+    <div id="gallery">
+         <h1>Gallery</h1>
+         <h2>Check out these great destinations!</h2>
          <div>
-          <div>	
-		  <h1>Good video about Barcelona<h1>
-		  <iframe width="1024" height="576" src="https://www.youtube.com/embed/uOzwwZxjPRs" title="Barcelona in 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		  <p> Barcelona is most visited city in Spain!</p>
-		  <p>Barcelona foto</p>		
-		   <img src=".\images\Barcelona.jpg" alt="Barcelona image">		  
-           <div>            
-			<p>Book your trip</p>
-           </div>
-          </div>
-         </div>
-         <!-- END PHOTO CONTAINER 1 --><br><br><br><br>
-		 
-		 
-	    <!-- PHOTO CONTAINER 2 -->
-         <div>
-          <div>	
-		   <h1>Here is good video about Rome</h1>
-		     <a href="https://www.youtube.com/watch?v=oSexfR0Ubzw" target="new">Rome</a>
-			 <p>Rome is the most popular city in Italy,that is one nice foto</p>
-		   <img src=".\images\Rome.jpg" alt="Foto Rome">
-           <div>           
-            <p>Book your trip</p>
-           </div>
-          </div>
-         </div>
-         <!-- END PHOTO CONTAINER 2 --><br><br><br><br>
-		 
-		 <!-- PHOTO CONTAINER 3 -->
-         <div>
-          <div>
-		  <h1>New York is the most popular city in USA,look nex video.</h1>
-		  <a href="https://www.youtube.com/watch?v=TmDKbUrSYxQ" target="new">New York</a>	
-		  <p>Amazing New York foto</p>
-		   <img src=".\images\New York.jpg" alt="Foto New York">
-           <div>           
-            <p>Book your trip</p>
-           </div>
-          </div>
-         </div>
-         <!-- END PHOTO CONTAINER 3 --><br><br><br><br>
-		 
-		 <!-- PHOTO CONTAINER 4 -->
-         <div>
-          <div>
-		  <p>Tokyo, the capital, is by far one of the most popular cities in Japan.</p>
-		   <img src=".\images\Tokyo.jpg" alt="Foto Tokyo">
-           <div>           
-            <p>Book your trip</p>
-           </div>
-          </div>
-         </div>
-         <!-- END PHOTO CONTAINER 4 -->
-		 		  				   		 				         </div>	       </div>
-      </section>
+
+             <div class="row">
+               <div class="column">
+                 <img src="images/Barcelona small.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+               </div>
+               <div class="column">
+                 <img src="images/New York small.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+               </div>
+               <div class="column">
+                 <img src="images/Rome small.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+               </div>
+               <div class="column">
+                 <img src="images/Tokyo small.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+               </div>
+             </div>
+             
+             <div id="myModal" class="modal">
+               <span class="close cursor" onclick="closeModal()">&times;</span>
+               <div class="modal-content">
+             
+                 <div class="mySlides">
+                   <div class="numbertext">1 / 4</div>
+                   <img src="images/Barcelona.jpg" style="width:100%">
+                 </div>
+             
+                 <div class="mySlides">
+                   <div class="numbertext">2 / 4</div>
+                   <img src="images/New York.jpg" style="width:100%">
+                 </div>
+             
+                 <div class="mySlides">
+                   <div class="numbertext">3 / 4</div>
+                   <img src="images/Rome.jpg" style="width:100%">
+                 </div>
+                 
+                 <div class="mySlides">
+                   <div class="numbertext">4 / 4</div>
+                   <img src="images/Tokyo.jpg" style="width:100%">
+                 </div>
+                 
+                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+             
+                 <div class="caption-container">
+                   <p id="caption"></p>
+                 </div>
+             
+             
+                 <div class="column">
+                   <img class="demo cursor" src="images/Barcelona small.jpg" style="width:100%" onclick="currentSlide(1)" alt="Barcelona">
+                 </div>
+                 <div class="column">
+                   <img class="demo cursor" src="images/New York small.jpg" style="width:100%" onclick="currentSlide(2)" alt="New York">
+                 </div>
+                 <div class="column">
+                   <img class="demo cursor" src="images/Rome small.jpg" style="width:100%" onclick="currentSlide(3)" alt="Rome">
+                 </div>
+                 <div class="column">
+                   <img class="demo cursor" src="images/Tokyo small.jpg" style="width:100%" onclick="currentSlide(4)" alt="Tokyo">
+                 </div>
+               </div>
+             </div>
+            </section>
       <!-- END Gallery -->
 
       <!-- RSVP -->
